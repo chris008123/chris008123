@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- Banner: neon red fading to black, matching the avatar -->
-<img src="https://capsule-render.vercel.app/api?type=waving&height=220&color=0:ff2a3d,55:7a0c1a,100:0a0a0f&text=Chris%20Aidoo&fontSize=56&fontColor=ffffff&fontAlignY=38&desc=Full-Stack%20Engineer%20%C2%B7%20Builder%20%C2%B7%20Kumasi%2C%20Ghana&descSize=18&descAlignY=60&animation=fadeIn" alt="Chris Aidoo banner" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&height=220&color=0:ff2a3d,55:7a0c1a,100:0a0a0f&text=Chris%20Aidoo&fontSize=56&fontColor=ffffff&fontAlignY=38&desc=Full-Stack%20Engineer%20%C2%B7%20Builder%20%C2%B7%20%2C%20Ghana&descSize=18&descAlignY=60&animation=fadeIn" alt="Chris Aidoo banner" width="100%" />
 
 <!-- Animated typing header (self-hosted, no external service) -->
 <a href="https://chrisaidoo.vercel.app">
