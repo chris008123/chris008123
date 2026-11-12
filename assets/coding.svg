@@ -1,120 +1,153 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 30" width="560" height="300" shape-rendering="crispEdges" role="img" aria-label="Pixel art of a developer coding at a desk" xmlns:c2pa="http://c2pa.org/manifest">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300" role="img" aria-labelledby="title desc">
+  <title id="title">Cyberpunk developer at work</title>
+  <desc id="desc">A futuristic developer in a dark hood and crimson tactical jacket works at a glowing code monitor in a neon-lit workspace.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#080d16"/><stop offset=".58" stop-color="#111827"/><stop offset="1" stop-color="#090d14"/></linearGradient>
+    <linearGradient id="red" x2="1" y2="1"><stop stop-color="#ff425b"/><stop offset=".5" stop-color="#c51e3a"/><stop offset="1" stop-color="#641326"/></linearGradient>
+    <linearGradient id="hood" x2="1" y2="1"><stop stop-color="#293447"/><stop offset="1" stop-color="#0c121d"/></linearGradient>
+    <linearGradient id="metal" x2=".8" y2="1"><stop stop-color="#f1f4f2"/><stop offset=".5" stop-color="#aab7c5"/><stop offset="1" stop-color="#586779"/></linearGradient>
+    <linearGradient id="screen" x2="0" y2="1"><stop stop-color="#111e31"/><stop offset="1" stop-color="#07101d"/></linearGradient>
+    <linearGradient id="cyan" x2="1"><stop stop-color="#35d7ee"/><stop offset="1" stop-color="#668cff"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="#ef2949" stop-opacity=".28"/><stop offset="1" stop-color="#ef2949" stop-opacity="0"/></radialGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="12"/></filter>
+    <filter id="neon" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <clipPath id="screenClip"><rect x="326" y="48" width="202" height="139" rx="7"/></clipPath>
+  </defs>
   <style>
-    .tw { animation: tw 3s steps(1) infinite; }
-    .tw2 { animation-delay: 1s; }
-    .tw3 { animation-delay: 2s; }
-    @keyframes tw { 0%, 100% { opacity: 1; } 50% { opacity: 0.2; } }
-
-    .hand { animation: tap 0.5s steps(1) infinite; }
-    @keyframes tap { 0% { transform: translateY(0); } 50% { transform: translateY(1px); } }
-
-    .head { animation: nod 4s steps(1) infinite; }
-    @keyframes nod { 0% { transform: translateY(0); } 55% { transform: translateY(1px); } 65% { transform: translateY(0); } 85% { transform: translateY(1px); } 92% { transform: translateY(0); } }
-
-    .blink { transform-box: fill-box; transform-origin: center; animation: blink 4s steps(1) infinite; }
-    @keyframes blink { 0%, 94% { transform: scaleY(1); } 95%, 97% { transform: scaleY(0.2); } 98%, 100% { transform: scaleY(1); } }
-
-    .ln { transform-box: fill-box; transform-origin: 0 50%; transform: scaleX(0); animation: type 9s steps(10) infinite; }
-    .l2 { animation-delay: 0.9s; }
-    .l3 { animation-delay: 1.8s; }
-    .l4 { animation-delay: 2.7s; }
-    .l5 { animation-delay: 3.6s; }
-    @keyframes type { 0% { transform: scaleX(0); } 12% { transform: scaleX(1); } 88% { transform: scaleX(1); } 94% { transform: scaleX(0); } 100% { transform: scaleX(0); } }
-
-    .cur { animation: cur 1s steps(1) infinite; }
-    @keyframes cur { 0% { opacity: 1; } 50% { opacity: 0; } }
-
-    .st { animation: rise 2.4s steps(4) infinite; opacity: 0; }
-    .st2 { animation-delay: 1.2s; }
-    @keyframes rise { 0% { transform: translateY(0); opacity: 0; } 20% { opacity: 0.8; } 100% { transform: translateY(-4px); opacity: 0; } }
-
-    @media (prefers-reduced-motion: reduce) {
-      * { animation: none !important; }
-      .ln { transform: scaleX(1); }
-    }
+    .ambient{animation:ambient 5s ease-in-out infinite alternate;transform-origin:50% 50%}
+    .pulse{animation:pulse 2.8s ease-in-out infinite}
+    .blink{transform-box:fill-box;transform-origin:center;animation:blink 5.5s infinite}
+    .typing{animation:typing .34s ease-in-out infinite alternate;transform-origin:top center}
+    .cursor{animation:cursor 1s steps(2,end) infinite}
+    .steam{animation:steam 2.6s ease-in-out infinite}
+    .steam.s2{animation-delay:1.1s}
+    .scan{animation:scan 5s linear infinite}
+    @keyframes ambient{from{opacity:.55}to{opacity:1}}
+    @keyframes pulse{0%,100%{opacity:.65}50%{opacity:1}}
+    @keyframes blink{0%,93%,100%{transform:scaleY(1)}95%,97%{transform:scaleY(.12)}}
+    @keyframes typing{from{transform:translateY(0)}to{transform:translateY(2px)}}
+    @keyframes cursor{0%,48%{opacity:1}50%,100%{opacity:0}}
+    @keyframes steam{0%{transform:translateY(5px);opacity:0}30%{opacity:.55}100%{transform:translateY(-13px);opacity:0}}
+    @keyframes scan{0%{transform:translateY(-135px);opacity:0}10%{opacity:.22}90%{opacity:.15}100%{transform:translateY(140px);opacity:0}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important}}
   </style>
 
-  <!-- Room -->
-  <rect width="56" height="30" fill="#0d1117"/>
-  <rect y="28" width="56" height="2" fill="#21262d"/>
-
-  <!-- Stars -->
-  <rect class="tw" x="2" y="3" width="1" height="1" fill="#f0f6fc"/>
-  <rect class="tw tw2" x="14" y="2" width="1" height="1" fill="#f0f6fc"/>
-  <rect class="tw tw3" x="18" y="1" width="1" height="1" fill="#FCD116"/>
-  <rect class="tw tw2" x="31" y="2" width="1" height="1" fill="#f0f6fc"/>
-  <rect class="tw" x="54" y="3" width="1" height="1" fill="#f0f6fc"/>
-  <rect class="tw tw3" x="3" y="9" width="1" height="1" fill="#f0f6fc"/>
-
-  <!-- Wall flag -->
-  <rect x="22" y="3" width="8" height="2" fill="#CE1126"/>
-  <rect x="22" y="5" width="8" height="2" fill="#FCD116"/>
-  <rect x="22" y="7" width="8" height="2" fill="#006B3F"/>
-  <rect x="25" y="5" width="2" height="2" fill="#010409"/>
-
-  <!-- Desk -->
-  <rect x="18" y="21" width="38" height="2" fill="#8b5a2b"/>
-  <rect x="20" y="23" width="34" height="1" fill="#6b4423"/>
-  <rect x="20" y="24" width="2" height="4" fill="#6b4423"/>
-  <rect x="52" y="24" width="2" height="4" fill="#6b4423"/>
+  <!-- Neon-lit room -->
+  <rect width="560" height="300" rx="18" fill="url(#bg)"/>
+  <circle cx="130" cy="118" r="150" fill="url(#glow)" filter="url(#soft)"/>
+  <circle cx="450" cy="100" r="130" fill="#087eaa" opacity=".12" filter="url(#soft)"/>
+  <path d="M0 236H560" stroke="#273448" stroke-width="2"/>
+  <g opacity=".7">
+    <path d="M26 0V78H52V0M66 0V42H78V0" stroke="#12bad1" stroke-width="5" opacity=".3"/>
+    <path d="M545 0V95H524V0" stroke="#ed284b" stroke-width="6" opacity=".35"/>
+    <path d="M18 88H92M470 26H540" stroke="#25374d" stroke-width="2"/>
+    <rect x="20" y="104" width="8" height="54" rx="3" fill="#ef2949" opacity=".55"/>
+    <rect x="535" y="116" width="5" height="43" rx="2" fill="#20c7e5" opacity=".6"/>
+  </g>
+  <g class="ambient" opacity=".7">
+    <circle cx="44" cy="34" r="2" fill="#44d9ef"/><circle cx="88" cy="70" r="1.5" fill="#f23b5a"/>
+    <circle cx="506" cy="34" r="2" fill="#f23b5a"/><circle cx="480" cy="218" r="1.5" fill="#42d8ee"/>
+  </g>
 
   <!-- Monitor -->
-  <rect x="32" y="5" width="20" height="13" fill="#484f58"/>
-  <rect x="33" y="6" width="18" height="11" fill="#010409"/>
-  <rect x="41" y="18" width="2" height="2" fill="#6e7681"/>
-  <rect x="37" y="20" width="10" height="1" fill="#6e7681"/>
+  <g>
+    <rect x="309" y="31" width="237" height="171" rx="12" fill="#27364a" stroke="#52647a" stroke-width="2"/>
+    <rect x="317" y="39" width="221" height="155" rx="7" fill="#050a12"/>
+    <rect x="326" y="48" width="202" height="139" rx="5" fill="url(#screen)"/>
+    <g clip-path="url(#screenClip)">
+      <rect x="326" y="48" width="202" height="18" fill="#17263b"/>
+      <circle cx="338" cy="57" r="3" fill="#ff5268"/><circle cx="349" cy="57" r="3" fill="#f5c451"/><circle cx="360" cy="57" r="3" fill="#40d69a"/>
+      <text x="376" y="60" fill="#8496ad" font-size="7" font-family="monospace">workspace / main.ts</text>
+      <path d="M350 72V181" stroke="#23334a"/>
+      <g font-family="monospace" font-size="9">
+        <text x="336" y="82" fill="#71839b">01</text><text x="357" y="82" fill="#e8a6ff">const</text><text x="385" y="82" fill="#77d8ef"> build</text><text x="415" y="82" fill="#d9e4f3"> = () =&gt; {</text>
+        <text x="336" y="99" fill="#71839b">02</text><text x="366" y="99" fill="#8ddca8">return</text><text x="402" y="99" fill="#d9e4f3"> (</text><text x="413" y="99" fill="#f4c66b">&lt;Profile /&gt;</text>
+        <text x="336" y="116" fill="#71839b">03</text><text x="366" y="116" fill="#d9e4f3">  theme=</text><text x="404" y="116" fill="#f19aab">"midnight"</text>
+        <text x="336" y="133" fill="#71839b">04</text><text x="366" y="133" fill="#d9e4f3">  accent=</text><text x="407" y="133" fill="#f19aab">"crimson"</text>
+        <text x="336" y="150" fill="#71839b">05</text><text x="366" y="150" fill="#d9e4f3">  motion=</text><text x="406" y="150" fill="#f19aab">"smooth"</text>
+        <text x="336" y="167" fill="#71839b">06</text><text x="357" y="167" fill="#e8a6ff">export</text><text x="389" y="167" fill="#8ddca8"> default</text><text x="431" y="167" fill="#d9e4f3"> build</text>
+      </g>
+      <rect class="cursor" x="476" y="160" width="2" height="10" rx="1" fill="#39d8ef"/>
+      <rect class="scan" x="326" y="48" width="202" height="18" fill="#39d8ef" opacity=".12"/>
+    </g>
+    <path d="M414 202V220H440V202" fill="#53657a"/>
+    <path d="M393 221H462L472 228H383Z" fill="#718197"/>
+    <path d="M320 202H535" stroke="#e72c4c" stroke-width="2" opacity=".65" filter="url(#neon)"/>
+  </g>
 
-  <!-- Code lines -->
-  <g class="ln l1"><rect x="35" y="7" width="3" height="1" fill="#FCD116"/><rect x="39" y="7" width="7" height="1" fill="#2ea043"/></g>
-  <g class="ln l2"><rect x="37" y="9" width="4" height="1" fill="#CE1126"/><rect x="42" y="9" width="6" height="1" fill="#c9d1d9"/></g>
-  <g class="ln l3"><rect x="37" y="11" width="3" height="1" fill="#CE1126"/><rect x="41" y="11" width="3" height="1" fill="#FCD116"/><rect x="45" y="11" width="3" height="1" fill="#2ea043"/></g>
-  <g class="ln l4"><rect x="37" y="13" width="8" height="1" fill="#c9d1d9"/></g>
-  <g class="ln l5"><rect x="35" y="15" width="2" height="1" fill="#FCD116"/><rect x="38" y="15" width="9" height="1" fill="#c9d1d9"/></g>
-  <rect class="cur" x="48" y="15" width="1" height="1" fill="#FCD116"/>
+  <!-- Desk -->
+  <path d="M22 235H548L560 249H0Z" fill="#293447"/>
+  <path d="M0 249H560V300H0Z" fill="#111a28"/>
+  <path d="M0 249H560" stroke="#506078" stroke-width="2"/>
+  <path d="M0 258H560" stroke="#1d2b3e"/>
 
-  <!-- Coffee mug + steam -->
-  <rect x="30" y="18" width="3" height="3" fill="#f0f6fc"/>
-  <rect x="30" y="18" width="3" height="1" fill="#6f4e37"/>
-  <rect x="33" y="19" width="1" height="1" fill="#f0f6fc"/>
-  <rect class="st" x="30" y="16" width="1" height="1" fill="#c9d1d9"/>
-  <rect class="st st2" x="31" y="16" width="1" height="1" fill="#c9d1d9"/>
+  <!-- Character: hood and shoulders -->
+  <g>
+    <path d="M67 244Q70 201 101 174Q119 157 158 157Q200 156 225 184Q244 205 249 244Z" fill="url(#hood)" stroke="#43536a" stroke-width="2"/>
+    <path d="M87 240Q91 201 117 184L144 205L130 250Z" fill="#111a28"/>
+    <path d="M177 183Q218 180 235 213L250 244H185L164 210Z" fill="url(#red)" stroke="#ff5368" stroke-width="1.5"/>
+    <path d="M191 198L224 211L238 239H205L184 218Z" fill="#8e1830"/>
+    <path d="M82 226L106 202L126 217L111 245H75Z" fill="#1a2637" stroke="#66778c" stroke-width="2"/>
+    <path d="M187 224L218 224L229 239H185Z" fill="#202d40" stroke="#b72b45" stroke-width="2"/>
+    <rect x="205" y="227" width="15" height="8" rx="2" fill="#0a111c" stroke="#e9445d"/>
+    <path d="M210 231H216" stroke="#41d8ec" stroke-width="1.5" class="pulse"/>
+    <!-- chest harness -->
+    <path d="M132 180L153 199L143 244H117L126 202Z" fill="#34445a" stroke="#62748b"/>
+    <path d="M151 199L172 181L189 203L176 244H145Z" fill="#101927" stroke="#45566c"/>
+    <path d="M154 207L171 207L166 224H149Z" fill="#a61e39" stroke="#fa4963"/>
+    <path d="M156 211H166M154 216H164" stroke="#ffb1bc" stroke-width="1" opacity=".8"/>
+    <!-- hood silhouette -->
+    <path d="M94 177Q91 135 124 117Q159 99 190 126Q212 145 203 184L184 207L168 186L136 177L111 201Z" fill="url(#hood)" stroke="#53657a" stroke-width="3"/>
+    <path d="M104 156Q105 123 139 116Q176 108 195 143L185 164L162 151L131 163Z" fill="#202c3e"/>
+    <path d="M109 149Q119 119 151 116" fill="none" stroke="#e72d4c" stroke-width="3" opacity=".75"/>
+    <!-- helmet / mask -->
+    <path d="M117 131Q127 109 153 109Q181 110 190 137L184 170Q177 189 151 191Q127 187 117 165Z" fill="url(#metal)" stroke="#e4eaf0" stroke-width="2"/>
+    <path d="M120 137Q141 124 185 137L181 154Q159 164 123 153Z" fill="#111b2a" stroke="#65768a" stroke-width="2"/>
+    <path d="M129 144L148 143L145 150L129 151Z" fill="#4bd9ec" filter="url(#neon)" class="blink"/>
+    <path d="M157 143L176 145L173 152L157 150Z" fill="#f13a59" filter="url(#neon)"/>
+    <path d="M149 154L155 154L153 160L148 160Z" fill="#24364b"/>
+    <path d="M135 164L169 166L163 177L144 178Z" fill="#263548" stroke="#718196"/>
+    <path d="M143 168L147 168M151 169L155 169M159 169L163 169" stroke="#c6d0dc" stroke-width="2"/>
+    <path d="M118 140L108 148L111 165L122 170" fill="none" stroke="#b8c4d0" stroke-width="5"/>
+    <circle cx="112" cy="155" r="9" fill="#26374c" stroke="#e63855" stroke-width="2"/>
+    <circle cx="112" cy="155" r="3" fill="#49d8ed" class="pulse"/>
+    <path d="M177 121L190 109L197 119L188 139" fill="#a9b5c2" stroke="#e5eaf0" stroke-width="2"/>
+    <path d="M186 119L196 113" stroke="#f13a59" stroke-width="3"/>
+    <!-- helmet crest details -->
+    <path d="M139 111L133 94L147 108L151 91L158 109L171 96L168 115" fill="#aab7c5" stroke="#e8edf2" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M150 111L152 99" stroke="#ed3150" stroke-width="2"/>
+  </g>
 
-  <!-- Chair -->
-  <rect x="5" y="12" width="2" height="9" fill="#30363d"/>
-  <rect x="6" y="21" width="10" height="1" fill="#484f58"/>
-  <rect x="10" y="22" width="1" height="5" fill="#30363d"/>
-  <rect x="7" y="27" width="8" height="1" fill="#30363d"/>
-  <rect x="7" y="28" width="1" height="1" fill="#6e7681"/>
-  <rect x="14" y="28" width="1" height="1" fill="#6e7681"/>
-
-  <!-- Legs -->
-  <rect x="8" y="19" width="9" height="2" fill="#2f4f8f"/>
-  <rect x="15" y="21" width="2" height="6" fill="#2f4f8f"/>
-  <rect x="15" y="27" width="5" height="1" fill="#f0f6fc"/>
-
-  <!-- Torso (Ghana flag hoodie) -->
-  <rect x="8" y="12" width="5" height="2" fill="#CE1126"/>
-  <rect x="8" y="14" width="5" height="2" fill="#FCD116"/>
-  <rect x="8" y="16" width="5" height="3" fill="#006B3F"/>
-  <rect x="10" y="14" width="1" height="1" fill="#010409"/>
+  <!-- Arms and typing hands -->
+  <g class="typing">
+    <path d="M192 205Q220 198 245 215L274 233L261 247L226 232L194 232Z" fill="url(#red)" stroke="#ef5369" stroke-width="2"/>
+    <path d="M234 222L260 235L252 247L226 237Z" fill="#192538" stroke="#718096"/>
+    <path d="M254 239L277 241L280 248L255 249Z" fill="#b7c3cf"/>
+    <path d="M275 241L302 241L305 247L279 249Z" fill="#d4dde6"/>
+    <path d="M265 237L274 235L282 240L278 245L266 244Z" fill="#d3a17e"/>
+  </g>
+  <path d="M72 243H311" stroke="#65758a" stroke-width="2"/>
+  <path d="M242 251H320" stroke="#1c2a3d" stroke-width="3"/>
 
   <!-- Keyboard -->
-  <rect x="18" y="20" width="10" height="1" fill="#6e7681"/>
+  <path d="M274 231L356 231L373 245L286 245Z" fill="#1c2a3d" stroke="#687a91" stroke-width="1.5"/>
+  <path d="M284 235L350 235" stroke="#4c617b" stroke-width="2" stroke-dasharray="5 4"/>
+  <path d="M292 240L358 240" stroke="#31cde6" stroke-width="1" opacity=".75"/>
 
-  <!-- Arm + typing hand -->
-  <rect x="10" y="14" width="2" height="4" fill="#a30d20"/>
-  <rect x="11" y="16" width="10" height="2" fill="#a30d20"/>
-  <g class="hand"><rect x="20" y="17" width="3" height="3" fill="#8d5524"/></g>
-
-  <!-- Head -->
-  <g class="head">
-    <rect x="10" y="11" width="2" height="1" fill="#8d5524"/>
-    <rect x="9" y="6" width="5" height="5" fill="#8d5524"/>
-    <rect x="14" y="8" width="1" height="1" fill="#6f3f1a"/>
-    <rect x="9" y="5" width="5" height="2" fill="#010409"/>
-    <rect x="9" y="7" width="1" height="3" fill="#010409"/>
-    <rect x="9" y="4" width="5" height="1" fill="#FCD116"/>
-    <rect x="10" y="7" width="2" height="3" fill="#006B3F"/>
-    <rect class="blink" x="12" y="8" width="1" height="1" fill="#010409"/>
+  <!-- Coffee and small desk details -->
+  <g>
+    <path d="M39 226H66L63 247H42Z" fill="#26364b" stroke="#8fa0b4" stroke-width="1.5"/>
+    <path d="M65 231Q78 229 74 240Q71 246 64 243" fill="none" stroke="#8fa0b4" stroke-width="3"/>
+    <path d="M43 231H65" stroke="#ed3150" stroke-width="2"/>
+    <path class="steam" d="M48 220Q42 214 49 208" fill="none" stroke="#8bdff0" stroke-width="2" stroke-linecap="round"/>
+    <path class="steam s2" d="M58 220Q53 213 60 206" fill="none" stroke="#8bdff0" stroke-width="2" stroke-linecap="round"/>
+    <rect x="494" y="232" width="30" height="7" rx="3" fill="#182538" stroke="#43546a"/>
+    <circle cx="516" cy="235.5" r="2" fill="#40d9ed" class="pulse"/>
   </g>
-<metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo2NDc4NTcwNi1kZjc1LTQ3NDQtODY0MC1kMjBjZWI4NTBkYWQAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaOiDDkUth2rfdKtLSLQTb+EAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDplNDVlNGQyMC03ZGNiLTQ1MTYtOGQ2ZS00MjMwMjQ5NWU0N2JscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoQZCkGD1dpx/dG9Qv2PBGHAAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggRJzkqCTu+hkyFMNEyQuKijME/vY32ItGR31GtBiedbqkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaGdMWa6Rp6hqxsMZFC3IqF8AAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYIKvNQFhHEBI9NFdvd3eQvXCzNCoF8X79HB9f021YePjvZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GRgyZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjY0Nzg1NzA2LWRmNzUtNDc0NC04NjQwLWQyMGNlYjg1MGRhZC9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOmIyNzhiMTgxLTU0ODAtNGQ5MS04NjRmLWM3NWE5NmY1ZDZjOXJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCBEnOSoJO76GTIUw0TJC4qKMwT+9jfYi0ZHfUa0GJ51uqJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggXchZUTSiLxceDOH5KOOgVyzvl1qFCp5OGYBF0aCsb1CiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggiSN9AxhfOXoatSaUdOpFN7k3n2Nofynaa8wvS/rsEdp0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQMSpga6OVXy5JSt9Y3i7LwbV7+i0LOvX5ZCQiZ3ZgVvs1Qts8CiWxftx9ooMrjl2Li5pE1LxPsPfyTXqp4uzzHg=</c2pa:manifest></metadata></svg>
+
+  <!-- Foreground neon edge -->
+  <path d="M0 268H560" stroke="#e52b4b" stroke-width="1" opacity=".22"/>
+  <path d="M18 282H108" stroke="#36cfe8" stroke-width="2" opacity=".45"/>
+  <path d="M458 282H542" stroke="#ed3150" stroke-width="2" opacity=".55"/>
+  <rect x="1" y="1" width="558" height="298" rx="17" fill="none" stroke="#34445a" stroke-width="2" opacity=".8"/>
+</svg>
