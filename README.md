@@ -30,6 +30,14 @@ I’m a software developer from Ghana who enjoys building useful, scalable appli
 - 🤝 Mentor in the Computer Science Department
 - 🌱 Currently sharpening how I build reliable, maintainable software
 
+<div align="center">
+
+<img src="assets/coding.svg" alt="Pixel art of me coding at my desk" width="520" />
+
+<sub>Me, most days. ☕ + 🇬🇭 + code</sub>
+
+</div>
+
 <img src="https://capsule-render.vercel.app/api?type=rect&height=4&color=0:CE1126,50:FCD116,100:006B3F" width="100%" alt="" />
 
 ## 🛠️ Featured Projects
