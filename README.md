@@ -1,25 +1,24 @@
 <div align="center">
 
-<!-- Banner: Ghana colours (red, gold, green) -->
-<img src="https://capsule-render.vercel.app/api?type=waving&height=220&color=0:CE1126,50:FCD116,100:006B3F&text=Chris%20Aidoo&fontSize=56&fontColor=ffffff&fontAlignY=38&desc=Full-Stack%20Engineer%20%C2%B7%20Builder%20%C2%B7%20Kumasi%2C%20Ghana&descSize=18&descAlignY=60&animation=fadeIn" alt="Chris Aidoo banner" width="100%" />
+<!-- Banner: neon red fading to black, matching the avatar -->
+<img src="https://capsule-render.vercel.app/api?type=waving&height=220&color=0:ff2a3d,55:7a0c1a,100:0a0a0f&text=Chris%20Aidoo&fontSize=56&fontColor=ffffff&fontAlignY=38&desc=Full-Stack%20Engineer%20%C2%B7%20Builder%20%C2%B7%20Kumasi%2C%20Ghana&descSize=18&descAlignY=60&animation=fadeIn" alt="Chris Aidoo banner" width="100%" />
 
-<!-- Animated typing header -->
+<!-- Animated typing header (self-hosted, no external service) -->
 <a href="https://chrisaidoo.vercel.app">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=FCD116&center=true&vCenter=true&width=640&height=50&lines=Full-Stack+Developer;Computer+Science+%40+KNUST;Co-founder+%40+SL;Mentor+in+the+CS+Department;Turning+problems+into+solutions" alt="Typing animation" />
+  <img src="assets/typing.svg" alt="Full-Stack Developer, Computer Science at KNUST, Co-founder at SL, Mentor" width="640" />
 </a>
 
 <br/>
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-chrisaidoo.vercel.app-006B3F?style=for-the-badge&logo=vercel&logoColor=white)](https://chrisaidoo.vercel.app)
-[![GitHub](https://img.shields.io/badge/GitHub-chris008123-CE1126?style=for-the-badge&logo=github&logoColor=white)](https://github.com/chris008123)
-[![Status](https://img.shields.io/badge/Open%20to-Collaboration-FCD116?style=for-the-badge&labelColor=24292e)](https://chrisaidoo.vercel.app)
+[![Portfolio](https://img.shields.io/badge/Portfolio-chrisaidoo.vercel.app-22d3ee?style=for-the-badge&logo=vercel&logoColor=0a0a0f&labelColor=0a0a0f)](https://chrisaidoo.vercel.app)
+[![GitHub](https://img.shields.io/badge/GitHub-chris008123-ff2a3d?style=for-the-badge&logo=github&logoColor=white&labelColor=0a0a0f)](https://github.com/chris008123)
+[![Status](https://img.shields.io/badge/Open%20to-Collaboration-ff9f1c?style=for-the-badge&labelColor=0a0a0f)](https://chrisaidoo.vercel.app)
 
-<img src="https://komarev.com/ghpvc/?username=chris008123&style=flat-square&color=30363d&label=PROFILE+VIEWS" alt="Profile views" />
+<img src="https://komarev.com/ghpvc/?username=chris008123&style=flat-square&color=ff2a3d&label=PROFILE+VIEWS" alt="Profile views" />
 
 </div>
 
-<!-- Tricolour divider -->
-<img src="https://capsule-render.vercel.app/api?type=rect&height=4&color=0:CE1126,50:FCD116,100:006B3F" width="100%" alt="" />
+<img src="https://capsule-render.vercel.app/api?type=rect&height=4&color=0:ff2a3d,100:22d3ee" width="100%" alt="" />
 
 ## 👋 About Me
 
@@ -34,11 +33,11 @@ I’m a software developer from Ghana who enjoys building useful, scalable appli
 
 <img src="assets/coding.svg" alt="Pixel art of me coding at my desk" width="520" />
 
-<sub>Me, most days. ☕ + 🇬🇭 + code</sub>
+<sub>Me, most days. ☕ + 🖤 + code</sub>
 
 </div>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&height=4&color=0:CE1126,50:FCD116,100:006B3F" width="100%" alt="" />
+<img src="https://capsule-render.vercel.app/api?type=rect&height=4&color=0:ff2a3d,100:22d3ee" width="100%" alt="" />
 
 ## 🛠️ Featured Projects
 
@@ -67,7 +66,7 @@ A mobile app that helps individuals track their church partnership and giving re
 </tr>
 </table>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&height=4&color=0:CE1126,50:FCD116,100:006B3F" width="100%" alt="" />
+<img src="https://capsule-render.vercel.app/api?type=rect&height=4&color=0:ff2a3d,100:22d3ee" width="100%" alt="" />
 
 ## 🧰 Tech Stack
 
@@ -87,7 +86,7 @@ A mobile app that helps individuals track their church partnership and giving re
 
 <img src="https://skillicons.dev/icons?i=git,github,docker,linux,figma,postman,firebase,vercel" alt="Tools and platforms" />
 
-<img src="https://capsule-render.vercel.app/api?type=rect&height=4&color=0:CE1126,50:FCD116,100:006B3F" width="100%" alt="" />
+<img src="https://capsule-render.vercel.app/api?type=rect&height=4&color=0:ff2a3d,100:22d3ee" width="100%" alt="" />
 
 ## 🐍 Contribution Snake
 
@@ -96,18 +95,17 @@ A mobile app that helps individuals track their church partnership and giving re
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/chris008123/chris008123/output/github-snake-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/chris008123/chris008123/output/github-snake.svg" />
-  <img alt="Snake eating my contribution graph" src="https://raw.githubusercontent.com/chris008123/chris008123/output/github-snake.svg" />
+  <img alt="Snake eating my contribution graph" src="https://raw.githubusercontent.com/chris008123/chris008123/output/github-snake-dark.svg" />
 </picture>
 
 </div>
 
-<!-- Footer -->
 <div align="center">
 
 **Always learning. Always building.** 🇬🇭
 
 <a href="https://chrisaidoo.vercel.app">Portfolio</a> · <a href="https://github.com/chris008123">GitHub</a>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&section=footer&height=120&color=0:CE1126,50:FCD116,100:006B3F" width="100%" alt="" />
+<img src="https://capsule-render.vercel.app/api?type=waving&section=footer&height=120&color=0:ff2a3d,55:7a0c1a,100:0a0a0f" width="100%" alt="" />
 
 </div>
