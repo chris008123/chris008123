@@ -36,7 +36,7 @@ I’m a software developer from Ghana who enjoys building useful, scalable appli
 
 <table>
 <tr>
-<td width="33%" valign="top">
+<td width="50%" valign="top">
 
 ### 🤟 Tellosign
 A computer vision project that recognises sign language, aimed at making communication more accessible.
@@ -46,17 +46,7 @@ A computer vision project that recognises sign language, aimed at making communi
 [View repository →](https://github.com/chris008123/TELLOSIGN)
 
 </td>
-<td width="33%" valign="top">
-
-### 🛒 Fastermall
-A super app by SL that brings marketplace, food, laundry and logistics services into one platform.
-
-`NestJS` `Prisma` `Supabase` `React`
-
-[Built with SL →](https://chrisaidoo.vercel.app)
-
-</td>
-<td width="33%" valign="top">
+<td width="50%" valign="top">
 
 ### ⛪ Partner Up
 A mobile app that helps individuals track their church partnership and giving records.
